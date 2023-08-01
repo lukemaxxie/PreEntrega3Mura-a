@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(0, 178, 223);
+  color: black;
+}
+
+header {
+  background-color: lightpink;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%; 
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cool-title {
+  font-family: 'YourCoolFont', sans-serif;
+  font-size: 48px; 
+  color: black; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sign-in-button {
+  background-color: #d10d68;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover {
+  background-color: lightgray;
+}
+
+.sign-in-button:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; 
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px; 
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%; 
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(246, 250, 252);
+  padding: 8px 12px;
+  background-color: #f4367f;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #f18fc5; 
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #f2f2f2;
+  color: #fff; 
+}
+
+ul li a.active {
+  background-color: #6e8dad; 
+  color: #fff; 
+}
+
+nav {
+  margin-top: 20px;
+}
+
+section {
+  background-color: rgb(81, 177, 255);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+nav ul li h3 {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li h3 a {
+  margin-right: 10px; 
+}
+
+nav ul li h3 a:nth-child(2) {
+  margin-right: 20px;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+.contact-form {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 600px; 
+  width: 200%;
+}
+
+.contact-title {
+  font-size: 40px;
+  animation: fadeInUp 1s ease;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #ff4f4f;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+img {
+  max-width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  margin-bottom: 10px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  width: 400px; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  animation: carouselAnimation 15s infinite linear; 
+}
+
+.carousel-slide img {
+  width: 50%;
+  height: auto;
+  transition: transform 1s ease; 
+}
+
+@keyframes carouselAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+footer {
+  background-color: lightblue;
+  padding: 20px;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
